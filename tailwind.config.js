@@ -4,20 +4,41 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: "#FFFFFF",
-        primary: "#0F172A",
-        border: "#E2E8F0",
-        accent: {
-          DEFAULT: "#2563EB",
-          hover: "#1D4ED8",
-          light: "#EFF6FF",
+        brand: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'gradient-x': 'gradient-x 6s ease infinite',
+        'float': 'float 4s ease-in-out infinite',
+      },
+      keyframes: {
+        'gradient-x': {
+          '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+          '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
       },
       maxWidth: {
-        container: "900px",
+        container: "1000px",
       },
     },
   },
